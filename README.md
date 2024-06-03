@@ -2,6 +2,9 @@
 Tutorial para instalação e configuração do Samba em distros do Debian/Ubuntu</br>
 ---
 
+<img src="/imagens/samba.png">
+
+
 **Passo 1: Instalar o Samba**
 1) Abra o terminal.
 Atualize a lista de pacotes:</br>
