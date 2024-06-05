@@ -11,7 +11,7 @@ Atualize a lista de pacotes:</br>
 `sudo apt update`
 
 2) Atualize a lista de pacotes:</br>
-`sudo apt update`
+`sudo apt upgrade`
 
 3) Instale o Samba:</br>
 `sudo apt install samba` </br> </br>
