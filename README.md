@@ -38,7 +38,7 @@ Documentos]
 `sudo chown :andre /etc/samba/smb.conf`
 5) Ajustar Permissões da Pasta compartilhada conforme comando a seguir:</br>
 `sudo chmod -R 0777 /home/andre/Documentos`
-6) Criar usuário e samba para o Samba:</br>
+6) Criar usuário e senha para o Samba:</br>
 `sudo smbpasswd -a andre` </br> </br> 
 
 **Passo 3: Inciar os Serviços do Samba**
