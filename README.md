@@ -22,7 +22,7 @@ Atualize a lista de pacotes:</br>
 2) Inserir no final do arquivo as seguintes linhas e depois salvá-lo:</br>
 
 ```
-Documentos]
+[Documentos]
         comment = pasta compartilhada
         path = /home/andre/Documentos
         browseable = yes
