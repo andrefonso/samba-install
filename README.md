@@ -7,19 +7,27 @@ Tutorial para instalação e configuração do Samba em distros do Debian/Ubuntu
 
 **Passo 1: Instalar o Samba**
 1) Abra o terminal.
-Atualize a lista de pacotes:</br>
-`sudo apt update`
+Atualize a lista de pacotes:
+```sh
+sudo apt update
+```
 
-2) Atualize a lista de pacotes:</br>
-`sudo apt upgrade`
+3) Atualize a lista de pacotes:
+```sh
+sudo apt upgrade
+```
 
-3) Instale o Samba:</br>
-`sudo apt install samba` </br> </br>
+5) Instale o Samba:
+```sh
+sudo apt install samba
+```
 
 **Passo 2: Configurar o Samba**
-1) Editar o arquivo de configuração do Samba.</br>
-`sudo nano /etc/samba/smb.conf`
-2) Inserir no final do arquivo as seguintes linhas e depois salvá-lo:</br>
+1) Editar o arquivo de configuração do Samba.
+```sh
+sudo nano /etc/samba/smb.conf
+```
+3) Inserir no final do arquivo as seguintes linhas e depois salvá-lo:</br>
 
 ```
 [Documentos]
@@ -32,16 +40,20 @@ Atualize a lista de pacotes:</br>
         create mask = 0777
         directory mask = 0777
 ```
-3) Alterar o usuário do arquivo smb.conf conforme comando a seguir:</br>
-`sudo chown andre /etc/samba/smb.conf`
-4) Alterar o grupo do arquivo smb.conf conforme comando a seguir:</br>
-`sudo chown :andre /etc/samba/smb.conf`
-5) Ajustar Permissões da Pasta compartilhada conforme comando a seguir:</br>
-`sudo chmod -R 0777 /home/andre/Documentos`
-6) Criar usuário e senha para o Samba:</br>
-`sudo smbpasswd -a andre` </br> </br> 
+4) Alterar o usuário e o grupo do arquivo smb.conf conforme comando a seguir:
+```sh
+sudo chown andre:andre /etc/samba/smb.conf
+```
+5) Ajustar Permissões da Pasta compartilhada conforme comando a seguir:
+```sh
+sudo chmod -R 0777 /home/andre/Documentos
+```
+6) Criar usuário e senha para o Samba:
+```sh
+sudo smbpasswd -a andre
+```
 
-**Passo 3: Inciar os Serviços do Samba**
+**Passo 3: Iniciar os Serviços do Samba**
 1) Habilitar os serviços do Samba para iniciar automaticamente na inicialização do sistema:</br>
 
 ```sh
@@ -50,11 +62,15 @@ ou se der erro
 sudo systemctl enable smbd nmbd
 ```
 
-2) Para reiniciar ambos os serviços (caso precise aplicar novas configurações):</br>
-`sudo systemctl restart smbd nmbd` </br>
+2) Para reiniciar ambos os serviços (caso precise aplicar novas configurações):
+```sh
+sudo systemctl restart smbd nmbd
+```
 
-3) Para verificar o status do Samba:</br>
-`sudo systemctl status smbd nmbd`
+3) Para verificar o status do Samba:
+```sh
+sudo systemctl status smbd nmbd
+```
 
 
 
