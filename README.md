@@ -48,7 +48,7 @@ Atualize a lista de pacotes:</br>
 sudo systemctl enable samba smbd nmbd
 ou se der erro
 sudo systemctl enable smbd nmbd
-
+```
 
 2) Para reiniciar ambos os serviços (caso precise aplicar novas configurações):</br>
 `sudo systemctl restart smbd nmbd` </br>
