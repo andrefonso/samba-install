@@ -43,7 +43,12 @@ Atualize a lista de pacotes:</br>
 
 **Passo 3: Inciar os Serviços do Samba**
 1) Habilitar os serviços do Samba para iniciar automaticamente na inicialização do sistema:</br>
-`sudo systemctl enable samba smbd nmbd` </br>
+
+```sh
+sudo systemctl enable samba smbd nmbd
+ou se der erro
+sudo systemctl enable smbd nmbd
+
 
 2) Para reiniciar ambos os serviços (caso precise aplicar novas configurações):</br>
 `sudo systemctl restart smbd nmbd` </br>
