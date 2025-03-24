@@ -12,12 +12,12 @@ Atualize a lista de pacotes:
 sudo apt update
 ```
 
-3) Atualize a lista de pacotes:
+2) Atualize a lista de pacotes:
 ```sh
 sudo apt upgrade
 ```
 
-5) Instale o Samba:
+3) Instale o Samba:
 ```sh
 sudo apt install samba
 ```
@@ -27,7 +27,7 @@ sudo apt install samba
 ```sh
 sudo nano /etc/samba/smb.conf
 ```
-3) Inserir no final do arquivo as seguintes linhas e depois salvá-lo:</br>
+2) Inserir no final do arquivo as seguintes linhas e depois salvá-lo:</br>
 
 ```
 [Documentos]
@@ -40,15 +40,15 @@ sudo nano /etc/samba/smb.conf
         create mask = 0777
         directory mask = 0777
 ```
-4) Alterar o usuário e o grupo do arquivo smb.conf conforme comando a seguir:
+3) Alterar o usuário e o grupo do arquivo smb.conf conforme comando a seguir:
 ```sh
 sudo chown andre:andre /etc/samba/smb.conf
 ```
-5) Ajustar Permissões da Pasta compartilhada conforme comando a seguir:
+4) Ajustar Permissões da Pasta compartilhada conforme comando a seguir:
 ```sh
 sudo chmod -R 0777 /home/andre/Documentos
 ```
-6) Criar usuário e senha para o Samba:
+5) Criar usuário e senha para o Samba:
 ```sh
 sudo smbpasswd -a andre
 ```
